@@ -26,7 +26,7 @@ app.get('/',(req,res)=>{
 const PORT = 5000;
 
 app.listen(PORT, ()=>{
-    mongoose.connect("mongodb+srv://sayalinikumbh:sayali2598@cluster1.06ujhga.mongodb.net/form-builder?retryWrites=true&w=majority&appName=Cluster1")
+    mongoose.connect("mongodb+srv://sayali:sayali2598@cluster0.oqqnrkc.mongodb.net/form-app?retryWrites=true&w=majority&appName=Cluster0")
     .then(()=>{console.log('Connected to database Successfuly')})
     .then(()=> console.log(`Server is running at port ${PORT} `))
    
