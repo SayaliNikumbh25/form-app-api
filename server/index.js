@@ -10,7 +10,13 @@ import verifyToken from './middlewares/verifyToken.js';
 env.config();
 const app = express();
 
-app.use(cors());
+app.use(cors(
+    {
+        origin: 'http://localhost:5173',
+        methods: 'GET,POST,PUT,DELETE,PATCH',
+        allowedHeaders: 'Content-Type,Authorization'
+    }
+));
 app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/forms', formRoutes);
