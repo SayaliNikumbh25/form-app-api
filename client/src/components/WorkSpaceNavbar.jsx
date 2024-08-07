@@ -7,11 +7,10 @@ const WorkSpaceNavbar = ({fields,title, setTitle, saveForm , setShowFlow, setSho
   const navigate = useNavigate()
   const [linkcopied, setLinkcopied] = useState(false)
   let id = localStorage.getItem("id");
-  let linkToCopy = `http://localhost:5173/form/${id}`; 
+  let linkToCopy = `https://form-app-client-grlv6r0wi-sayali-nikumbhs-projects.vercel.app/form/${id}`; 
 
   const handleSaveForm = async() => {
     const res = await saveForm();
-    navigate(`/form/${id}`)
     console.log(res)
 
   };
