@@ -10,7 +10,12 @@ import verifyToken from './middlewares/verifyToken.js';
 env.config();
 const app = express();
 
+<<<<<<< HEAD
 app.use(cors());
+=======
+
+  app.use(cors());
+>>>>>>> 5798fef0115ffffa76a29f1e84f2796ce7e8ba67
 
 
 app.use(express.json());
