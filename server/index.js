@@ -10,22 +10,7 @@ import verifyToken from './middlewares/verifyToken.js';
 env.config();
 const app = express();
 
-const allowedOrigins = [
-    'https://form-app-client-tan.vercel.app',
-    'https://form-app-client-arp1w9mr9-sayali-nikumbhs-projects.vercel.app',
-  ];
-  
-  app.use(cors({
-    origin: function(origin, callback) {
-      if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
-    },
-    methods: 'GET,POST,PUT,DELETE,PATCH',
-    allowedHeaders: 'Content-Type,Authorization'
-  }));
+app.use(cors());
 
 
 app.use(express.json());
