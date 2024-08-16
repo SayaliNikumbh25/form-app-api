@@ -12,6 +12,7 @@ const WorkSpaceNavbar = ({fields,title, setTitle, saveForm , setShowFlow, setSho
   const handleSaveForm = async() => {
     const res = await saveForm();
     console.log(res)
+    navigate(`/form/${id}`)
 
   };
   useEffect(()=>{
